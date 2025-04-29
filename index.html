@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanika D. Mane</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --accent: #ff4081;
+      --text: #333;
+      --light: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    aside {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      overflow-y: auto;
+      background: var(--primary);
+      padding: 2rem 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      z-index: 10;
+      font-size: 24px;
+    }
+
+    aside img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      font-weight: bold; 
+   border-bottom: 2px solid pink;
+  padding-bottom: 5px;
+display: inline-block;
+ margin-bottom: 1rem;
+  animation: rotateIn 1.2s ease-out;
+}
+ aside h3 {font-size: 1.6rem;
+  border-bottom: 2px solid var(--accent); /* <--- This is the pink line */
+  padding-bottom: 5px;
+  margin-bottom: 0.5rem;
+}
+aside h2 {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+    }
+    aside a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 0.5rem;
+      transition: background 0.3s, transform 0.3s;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    aside a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
+
+    main {
+      margin-left: 260px;
+      padding-bottom: 5rem;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    section {
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 20px;
+      background: white;
+      width: 90%;
+      max-width: 1000px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .skill-box {
+      width: 48%;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .progress {
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      height: 20px;
+      width: 100%;
+    }
+
+    .progress-bar {
+      height: 100%;
+      text-align: center;
+      color: white;
+      line-height: 20px;
+      border-radius: 5px;
+    }
+
+    .progress-bar-HTML { width: 90%; background-color: #ff6f61; }
+    .progress-bar-CSS { width: 85%; background-color: #4e73df; }
+    .progress-bar-Python { width: 80%; background-color: #f0ad4e; }
+    .progress-bar-SQL { width: 75%; background-color: #1f77b4; }
+    .progress-bar-C { width: 70%; background-color: #2ca02c; }
+    .progress-bar-DV { width: 80%; background-color: #9467bd; }
+
+    .certificate-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .certificate-box {
+      width: 48%;
+      padding: 10px;
+      background: #fdfdfd;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .certificate-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .container-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .box {
+      width: 48%;
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    a {
+      color: var(--primary);
+    }
+  </style>
+</head>
+
+<body>
+  <aside>
+    <img src="sanu.jpg" alt="Sanika Profile Photo">
+    <h3>Sanika D. Mane</h3>
+    <h2>Menu</h2>
+    <a href="#about"><i class="fas fa-user"></i> About</a>
+    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a>
+    <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+    <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Welcome to My Portfolio</h1>
+      <p>A budding developer eager to learn and grow in the world of technology</p>
+    </header>
+
+    <section id="about">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <p>Hi! I’m Sanika Mane, a first-year student pursuing a degree in Artificial Intelligence and Machine Learning (AIML). I’m passionate about how technology can think, learn, and solve real-world problems — and I'm excited to be part of this fast-growing field.
+
+        As I begin my journey in AIML, I’m focused on building a strong foundation in programming, data analysis, and machine learning concepts. I enjoy exploring how AI can be used in everyday life, from smart assistants to self-driving cars.
+        
+        In my free time, I love [add a hobby – e.g., reading, sketching, listening to music], which helps me stay creative and curious.
+        
+        I’m looking forward to gaining hands-on experience, collaborating on innovative projects, and constantly learning along the way.</p>
+    </section>
+
+    <section id="education">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <ul>
+        <li><strong>SSC (2022)</strong> - State board with A1 grade - Shivaji University</li>
+        <li><strong>HSC (2024)</strong> - State board with A1 grade - Shivaji University</li>
+        <li><strong>BTech (2025 - Present)</strong> - AIML Specialization - SPPU University</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2><i class="fas fa-cogs"></i> Skills</h2>
+      <div class="skills-container">
+        <div class="skill-box"><h3>HTML</h3><div class="progress"><div class="progress-bar progress-bar-HTML">90%</div></div></div>
+        <div class="skill-box"><h3>CSS</h3><div class="progress"><div class="progress-bar progress-bar-CSS">85%</div></div></div>
+        <div class="skill-box"><h3>Python</h3><div class="progress"><div class="progress-bar progress-bar-Python">80%</div></div></div>
+        <div class="skill-box"><h3>SQL</h3><div class="progress"><div class="progress-bar progress-bar-SQL">75%</div></div></div>
+        <div class="skill-box"><h3>C Language</h3><div class="progress"><div class="progress-bar progress-bar-C">70%</div></div></div>
+        <div class="skill-box"><h3>Data Visualization</h3><div class="progress"><div class="progress-bar progress-bar-DV">80%</div></div></div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2><i class="fas fa-certificate"></i> Certifications</h2>
+      <div class="certificate-container">
+        <div class="certificate-box"><img src="greatlearning.jpg" alt="SQL Certificate"></div>
+        <div class="certificate-box"><img src="avinya.jpg" alt="Avinya Certificate"></div>
+        <div class="certificate-box"><img src="PythonEssentials1.jpg" alt="Python Certificate 1"></div>
+        <div class="certificate-box"><img src="PythonEssentials2.jpg" alt="Python Certificate 1"></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2><i class="fas fa-code"></i> Projects</h2>
+      <div class="container-box">
+        <div class="box">
+          <h3>Zero Hunger Initiative</h3>
+          <img src="https://tse3.mm.bing.net/th?id=OIP.LzokaP6BCBts8eZUzGgdggHaD4&pid=Api&P=0&h=180" alt="Zero Hunger">
+          <a href="https://drive.google.com/file/d/1Kum-i6HLcsrOKwinq7bfj8G0ziwktCgC/view?usp=sharing" target="_blank">View Project</a><br>
+
+        </div>
+        <div class="box">
+          <h3>Vegetation Health Analysis</h3>
+          <img src="https://tse1.mm.bing.net/th?id=OIP.bPMecNiZjJboJoWdRNgMeAHaDt&pid=Api&P=0&h=180" alt="Vegetation">
+         
+          <a href="https://drive.google.com/file/d/12801PybM5TlCh35XccXpmXVzsR3edFxc/view?usp=sharing" target="_blank">Read Paper</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <p>Email: <a href="mailto:manesanika2006@gmail.com">manesanika2006@gmail.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/student</a></p>
+    </section>
+
+    <footer>
+      &copy; 2025 Sanika D. Mane
+    </footer>
+  </main>
+</body>
+</html>
